@@ -14,9 +14,22 @@
 	justify-content: space-between;
 }
 .header-nav {
+	position: relative;
 	/* .header-nav__list */
 	&__list {
+		flex-wrap: wrap;
 		display: flex;
+		&.active {
+			position: absolute;
+			display: flex;
+			width: 320px;
+			border-radius: 30px;
+			flex-direction: column;
+			text-align: center;
+			background-color: rgba(#999, 0.8);
+			z-index: 5;
+			transform: translateX(-260px) translateY(30px);
+		}
 	}
 	/* .header-nav__list-item */
 	&__list-item {
@@ -180,6 +193,7 @@
 }
 .contacts-main {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
